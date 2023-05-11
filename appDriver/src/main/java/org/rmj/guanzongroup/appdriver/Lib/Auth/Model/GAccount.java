@@ -1,4 +1,4 @@
-package org.rmj.guanzongroup.appdriver.Lib.Account.Model;
+package org.rmj.guanzongroup.appdriver.Lib.Auth.Model;
 
 public interface GAccount {
 

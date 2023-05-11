@@ -1,15 +1,15 @@
-package org.rmj.guanzongroup.appdriver.Lib.Account.Obj;
+package org.rmj.guanzongroup.appdriver.Lib.Auth.Obj;
 
 import android.app.Application;
 
-import org.rmj.guanzongroup.appdriver.Lib.Account.Model.GAccount;
+import org.rmj.guanzongroup.appdriver.Lib.Auth.Model.GAccount;
 
-public class CreateAccount implements GAccount {
+public class ForgotPassword implements GAccount {
 
 
     private final Application instance;
 
-    public CreateAccount(Application instance) {
+    public ForgotPassword(Application instance) {
         this.instance = instance;
     }
 

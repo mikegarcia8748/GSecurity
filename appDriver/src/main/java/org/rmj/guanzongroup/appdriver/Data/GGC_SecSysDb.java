@@ -9,6 +9,7 @@ import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
 
+import org.rmj.guanzongroup.appdriver.Data.Dao.DAccountInfo;
 import org.rmj.guanzongroup.appdriver.Data.Entity.EItinerary;
 
 @Database(entities = {
@@ -17,6 +18,8 @@ public abstract class GGC_SecSysDb extends RoomDatabase {
     private static final String TAG = GGC_SecSysDb.class.getSimpleName();
 
     private static GGC_SecSysDb instance;
+
+    public abstract DAccountInfo accountDao();
 
     public static synchronized GGC_SecSysDb getInstance(Context context){
         if(instance == null){
