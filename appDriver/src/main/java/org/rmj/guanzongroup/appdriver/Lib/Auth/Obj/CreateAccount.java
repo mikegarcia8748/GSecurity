@@ -3,6 +3,7 @@ package org.rmj.guanzongroup.appdriver.Lib.Auth.Obj;
 import static org.rmj.guanzongroup.appdriver.Etc.AppConstants.getLocalMessage;
 
 import android.app.Application;
+import android.util.Log;
 
 import org.rmj.guanzongroup.appdriver.Lib.Auth.Model.GAccount;
 
@@ -24,6 +25,7 @@ public class CreateAccount implements GAccount {
         } catch (Exception e){
             e.printStackTrace();
             message = getLocalMessage(e);
+            Log.d(TAG, message);
         }
         return 0;
     }
