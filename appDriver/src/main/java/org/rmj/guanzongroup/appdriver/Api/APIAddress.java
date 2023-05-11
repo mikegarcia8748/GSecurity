@@ -16,10 +16,25 @@ public class APIAddress {
 
     private static final String IMPORT_ITINERARY = "";
 
-    public APIAddress(Application instance, AppConfig poConfig) {
+    private static APIAddress mApi;
+
+    private APIAddress(Application instance) {
         this.instance = instance;
-        this.poConfig = poConfig;
+        this.poConfig = AppConfig.getInstance(instance);
     }
 
+    public static APIAddress getInstance(Application instance){
+        if(mApi == null){
+            mApi = new APIAddress(instance);
+        }
 
+        return mApi;
+    }
+
+    public String getAuthentication(){
+        if(!poConfig.isTesting()){
+            return LIVE_DATA + IMPORT_ITINERARY;
+        }
+        return LOCAL_DATA + IMPORT_ITINERARY;
+    }
 }

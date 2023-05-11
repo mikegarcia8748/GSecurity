@@ -10,11 +10,15 @@ public class AppConfig {
 
     private final SharedPreferences.Editor editor;
 
-    private static AppConfig mAppConfigPreference;
+    private static AppConfig mAppConfig;
 
     private static final String CONFIG_NAME = "GSysConfig";
 
     private static final String TEST_CASE = "cTestingx";
+    private static final String PRODUCT_ID = "sProdctID";
+    private static final String MOBILE_NO = "sMobileNo";
+    private static final String DEVICE_ID = "sDeviceID";
+    private static final String APP_TOKEN = "sAppToken";
 
     private AppConfig(Context context){
         int priv_Mode = 0;
@@ -23,10 +27,10 @@ public class AppConfig {
     }
 
     public static AppConfig getInstance(Context context){
-        if(mAppConfigPreference == null){
-            mAppConfigPreference = new AppConfig(context);
+        if(mAppConfig == null){
+            mAppConfig = new AppConfig(context);
         }
-        return mAppConfigPreference;
+        return mAppConfig;
     }
 
     public void setTestCase(boolean val){
@@ -36,5 +40,41 @@ public class AppConfig {
 
     public boolean isTesting(){
         return pref.getBoolean(TEST_CASE, false);
+    }
+
+    public void setProductID(String val){
+        editor.putString(PRODUCT_ID, val);
+        editor.commit();
+    }
+
+    public String getProductID(){
+        return pref.getString(PRODUCT_ID, "gRider");
+    }
+
+    public void setMobileNO(String val){
+        editor.putString(MOBILE_NO, val);
+        editor.commit();
+    }
+
+    public String getMobileNo(){
+        return pref.getString(MOBILE_NO, "");
+    }
+
+    public void setDeviceID(String val){
+        editor.putString(DEVICE_ID, val);
+        editor.commit();
+    }
+
+    public String getDeviceID(){
+        return pref.getString(DEVICE_ID, "");
+    }
+
+    public void setAppToken(String val){
+        editor.putString(APP_TOKEN, val);
+        editor.commit();
+    }
+
+    public String getAppToken(){
+        return pref.getString(APP_TOKEN, "");
     }
 }
