@@ -42,55 +42,53 @@ public class Telephony {
             List<SubscriptionInfo> subInfoList;
             ArrayList<String> Numbers = new ArrayList<>();
             SubscriptionManager mSubscriptionManager = null;
-            if (android.os.Build.VERSION.SDK_INT >= android.os.Build.VERSION_CODES.LOLLIPOP_MR1) {
-                mSubscriptionManager = SubscriptionManager.from(mContext);
-                subInfoList = mSubscriptionManager.getActiveSubscriptionInfoList();
-                if (subInfoList.size() > 0) {
-                    for (SubscriptionInfo subscriptionInfo : subInfoList) {
-                        Numbers.add(subscriptionInfo.getNumber());
-                    }
-                    if(Numbers.get(0) != null){
-                        String lsResult = "";
-                        String MobileNo = Numbers.get(0);
-                        if (!MobileNo.isEmpty()) {
-                            if (MobileNo.substring(0, 3).equalsIgnoreCase("+63")) {
-                                lsResult = MobileNo.replace("+63", "0");
-                            } else if (MobileNo.substring(0, 1).equalsIgnoreCase("9")) {
-                                lsResult = "0" + MobileNo;
-                            } else if (MobileNo.substring(0, 2).equalsIgnoreCase("63")) {
-                                lsResult = MobileNo.replace("63", "0");
-                            } else if (MobileNo.substring(0, 2).equalsIgnoreCase("09")) {
-                                lsResult = MobileNo;
-                            } else {
-                                MobileNo = MobileNo.replace("-", "");
-                                MobileNo = MobileNo.replace("+", "");
-                                String lsTarget = MobileNo.substring(0, 2);
-                                lsResult = MobileNo.replace(lsTarget, "09");
-                            }
+            mSubscriptionManager = SubscriptionManager.from(mContext);
+            subInfoList = mSubscriptionManager.getActiveSubscriptionInfoList();
+            if (subInfoList.size() > 0) {
+                for (SubscriptionInfo subscriptionInfo : subInfoList) {
+                    Numbers.add(subscriptionInfo.getNumber());
+                }
+                if(Numbers.get(0) != null){
+                    String lsResult = "";
+                    String MobileNo = Numbers.get(0);
+                    if (!MobileNo.isEmpty()) {
+                        if (MobileNo.substring(0, 3).equalsIgnoreCase("+63")) {
+                            lsResult = MobileNo.replace("+63", "0");
+                        } else if (MobileNo.substring(0, 1).equalsIgnoreCase("9")) {
+                            lsResult = "0" + MobileNo;
+                        } else if (MobileNo.substring(0, 2).equalsIgnoreCase("63")) {
+                            lsResult = MobileNo.replace("63", "0");
+                        } else if (MobileNo.substring(0, 2).equalsIgnoreCase("09")) {
+                            lsResult = MobileNo;
+                        } else {
+                            MobileNo = MobileNo.replace("-", "");
+                            MobileNo = MobileNo.replace("+", "");
+                            String lsTarget = MobileNo.substring(0, 2);
+                            lsResult = MobileNo.replace(lsTarget, "09");
                         }
-                        return lsResult;
-                    } else if(Numbers.get(1) != null){
-                        String lsResult = "";
-                        String MobileNo = Numbers.get(1);
-                        if (!MobileNo.isEmpty()) {
-                            if (MobileNo.substring(0, 3).equalsIgnoreCase("+63")) {
-                                lsResult = MobileNo.replace("+63", "0");
-                            } else if (MobileNo.substring(0, 1).equalsIgnoreCase("9")) {
-                                lsResult = "0" + MobileNo;
-                            } else if (MobileNo.substring(0, 2).equalsIgnoreCase("63")) {
-                                lsResult = MobileNo.replace("63", "0");
-                            } else if (MobileNo.substring(0, 2).equalsIgnoreCase("09")) {
-                                lsResult = MobileNo;
-                            } else {
-                                //this method is use for emulator testing...
-                                MobileNo = MobileNo.replace("-", "");
-                                MobileNo = MobileNo.replace("+", "");
-                                String lsTarget = MobileNo.substring(0, 2);
-                                lsResult = MobileNo.replace(lsTarget, "09");
-                            }
-                        }
-                        return lsResult;
                     }
+                    return lsResult;
+                } else if(Numbers.get(1) != null){
+                    String lsResult = "";
+                    String MobileNo = Numbers.get(1);
+                    if (!MobileNo.isEmpty()) {
+                        if (MobileNo.substring(0, 3).equalsIgnoreCase("+63")) {
+                            lsResult = MobileNo.replace("+63", "0");
+                        } else if (MobileNo.substring(0, 1).equalsIgnoreCase("9")) {
+                            lsResult = "0" + MobileNo;
+                        } else if (MobileNo.substring(0, 2).equalsIgnoreCase("63")) {
+                            lsResult = MobileNo.replace("63", "0");
+                        } else if (MobileNo.substring(0, 2).equalsIgnoreCase("09")) {
+                            lsResult = MobileNo;
+                        } else {
+                            //this method is use for emulator testing...
+                            MobileNo = MobileNo.replace("-", "");
+                            MobileNo = MobileNo.replace("+", "");
+                            String lsTarget = MobileNo.substring(0, 2);
+                            lsResult = MobileNo.replace(lsTarget, "09");
+                        }
+                    }
+                    return lsResult;
                 }
             }
         } catch (Exception e){
