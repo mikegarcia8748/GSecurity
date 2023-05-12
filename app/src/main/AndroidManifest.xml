@@ -13,8 +13,11 @@
         android:theme="@style/Theme.GSecurity"
         tools:targetApi="31">
         <activity
-            android:name=".Activity_Login"
+            android:name=".registerActivity"
             android:exported="false" />
+        <activity
+            android:name=".Activity_Login"
+            android:exported="true" />
     </application>
 
 </manifest>
