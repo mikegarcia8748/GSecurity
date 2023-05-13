@@ -23,13 +23,13 @@ public class Authentication implements GAccount {
     private static final String TAG = Authentication.class.getSimpleName();
 
     private final Application instance;
-    private final DAccountInfo poDao;
+//    private final DAccountInfo poDao;
 
     private String message;
 
     public Authentication(Application instance) {
         this.instance = instance;
-        this.poDao = GGC_SecSysDb.getInstance(instance).accountDao();
+//        this.poDao = GGC_SecSysDb.getInstance(instance).accountDao();
     }
 
     @Override
@@ -83,7 +83,7 @@ public class Authentication implements GAccount {
             employeeInfo.setMobileNo(AppConfig.getInstance(instance).getMobileNo());
             employeeInfo.setLoginxxx(AppConstants.DATE_MODIFIED());
             employeeInfo.setSessionx(AppConstants.CURRENT_DATE());
-            poDao.Save(employeeInfo);
+//            poDao.Save(employeeInfo);
 
             AccountSession loSession = AccountSession.getInstance(instance);
             loSession.setUserID(loResponse.getString("sUserIDxx"));
