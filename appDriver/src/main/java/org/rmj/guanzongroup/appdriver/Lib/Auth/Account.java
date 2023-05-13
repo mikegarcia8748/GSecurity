@@ -1,11 +1,11 @@
-package org.rmj.guanzongroup.appdriver.Lib.Account;
+package org.rmj.guanzongroup.appdriver.Lib.Auth;
 
 import android.app.Application;
 
-import org.rmj.guanzongroup.appdriver.Lib.Account.Model.GAccount;
-import org.rmj.guanzongroup.appdriver.Lib.Account.Obj.Authentication;
-import org.rmj.guanzongroup.appdriver.Lib.Account.Obj.CreateAccount;
-import org.rmj.guanzongroup.appdriver.Lib.Account.Obj.ForgotPassword;
+import org.rmj.guanzongroup.appdriver.Lib.Auth.Model.GAccount;
+import org.rmj.guanzongroup.appdriver.Lib.Auth.Obj.Authentication;
+import org.rmj.guanzongroup.appdriver.Lib.Auth.Obj.CreateAccount;
+import org.rmj.guanzongroup.appdriver.Lib.Auth.Obj.ForgotPassword;
 
 public class Account {
     private static final String TAG = Account.class.getSimpleName();
