@@ -10,7 +10,7 @@ import android.widget.TextView;
 public class  Activity_Login extends AppCompatActivity {
 
     TextView CreatNewAccount;
-    TextView Login;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

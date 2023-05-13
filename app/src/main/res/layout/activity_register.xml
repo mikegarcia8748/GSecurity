@@ -6,6 +6,38 @@
     android:layout_height="match_parent"
     tools:context=".registerActivity">
 
+    <EditText
+        android:id="@+id/inputEmail19"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg"
+        android:backgroundTint="#66808080"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/inputEmail15"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail15"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail15" />
+
+    <EditText
+        android:id="@+id/inputEmail20"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg"
+        android:backgroundTint="#66808080"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/inputEmail19"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail19"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail19" />
+
     <TextView
         android:id="@+id/textView6"
         android:layout_width="wrap_content"
@@ -13,10 +45,8 @@
         android:text="Middle Name"
         android:textColor="@color/black"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/inputPassword5"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword5"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword5" />
+        app:layout_constraintBottom_toTopOf="@+id/inputEmail9"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail9" />
 
     <TextView
         android:id="@+id/textView3"
@@ -25,27 +55,8 @@
         android:text="Email"
         android:textColor="@color/black"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/inputPassword6"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword6"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword6" />
-
-    <EditText
-        android:id="@+id/inputPassword9"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/bg"
-        android:backgroundTint="#66808080"
-
-        android:ems="10"
-        android:inputType="textPassword"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword8"
-        app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword8"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword8" />
+        app:layout_constraintBottom_toTopOf="@+id/inputEmail10"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail10" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:layout_width="match_parent"
@@ -73,7 +84,7 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
-        android:layout_marginTop="40dp"
+        android:layout_marginTop="48dp"
         android:layout_marginEnd="20dp"
         android:background="@drawable/bg"
         android:backgroundTint="#66808080"
@@ -82,14 +93,61 @@
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+    <EditText
+        android:id="@+id/inputEmail9"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg"
+        android:backgroundTint="#66808080"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword"
+        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+
+    <EditText
+        android:id="@+id/inputEmail10"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg"
+        android:backgroundTint="#66808080"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/inputEmail9"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail9"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail9" />
+
+    <EditText
+        android:id="@+id/inputEmail15"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="25dp"
+        android:background="@drawable/bg"
+        android:backgroundTint="#66808080"
+        android:ems="10"
+        android:inputType="textEmailAddress"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/inputEmail10"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail10"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail10" />
 
     <EditText
         android:id="@+id/inputPassword"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="25dp"
         android:background="@drawable/bg"
         android:backgroundTint="#66808080"
         android:ems="10"
@@ -102,79 +160,10 @@
         app:layout_constraintStart_toStartOf="@+id/inputEmail"
         app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
 
-    <EditText
-        android:id="@+id/inputPassword5"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/bg"
-        android:backgroundTint="#66808080"
-        android:ems="10"
-
-        android:inputType="textPassword"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
-
-    <EditText
-        android:id="@+id/inputPassword6"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/bg"
-        android:backgroundTint="#66808080"
-        android:ems="10"
-
-        android:inputType="textPassword"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword5"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword5"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword5" />
-
-    <EditText
-        android:id="@+id/inputPassword7"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/bg"
-        android:backgroundTint="#66808080"
-        android:ems="10"
-
-        android:inputType="textPassword"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword6"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword6"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword6" />
-
-    <EditText
-        android:id="@+id/inputPassword8"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:background="@drawable/bg"
-        android:backgroundTint="#66808080"
-        android:ems="10"
-
-        android:inputType="textPassword"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword7"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword7"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword7" />
-
     <TextView
         android:id="@+id/textView2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="1dp"
         android:text="Last Name"
         android:textColor="@color/black"
         android:textSize="15dp"
@@ -188,7 +177,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginBottom="1dp"
-        android:text="First Name"
+        style="@style/Label_TextFieldHint"
         android:textColor="@color/black"
         android:textSize="15dp"
         app:layout_constraintBottom_toTopOf="@+id/inputPassword"
@@ -203,10 +192,8 @@
         android:text="Mobile No."
         android:textColor="#050505"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/inputPassword7"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword7"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword7" />
+        app:layout_constraintBottom_toTopOf="@+id/inputEmail15"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail15" />
 
     <TextView
         android:id="@+id/textView8"
@@ -214,10 +201,8 @@
         android:layout_height="wrap_content"
         android:text="Password"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/inputPassword8"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword8"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword8" />
+        app:layout_constraintBottom_toTopOf="@+id/inputEmail19"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail19" />
 
     <TextView
         android:id="@+id/textView9"
@@ -225,20 +210,27 @@
         android:layout_height="wrap_content"
         android:text="Re-Type-Password"
         android:textSize="15sp"
-        app:layout_constraintBottom_toTopOf="@+id/inputPassword9"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword9"
-        app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword9" />
+        app:layout_constraintBottom_toTopOf="@+id/inputEmail20"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail20" />
 
     <Button
         android:id="@+id/loginregister"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:layout_marginStart="100dp"
-        android:layout_marginEnd="100dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="80dp"
         android:text="LOGIn"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword9"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword9"
-        tools:layout_editor_absoluteY="613dp" />
+        app:layout_constraintEnd_toEndOf="@+id/inputEmail20"
+        app:layout_constraintStart_toStartOf="@+id/inputEmail20"
+        app:layout_constraintTop_toBottomOf="@+id/inputEmail20" />
+
+    <TextView
+        android:id="@+id/textView5"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        app:layout_constraintBottom_toTopOf="@+id/inputPassword"
+        app:layout_constraintStart_toStartOf="@+id/inputPassword" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
