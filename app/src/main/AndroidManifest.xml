@@ -13,12 +13,6 @@
         android:theme="@style/Theme.GSecurity"
         tools:targetApi="31">
         <activity
-            android:name=".Activities.Activity_Login"
-            android:configChanges="orientation|keyboardHidden|screenSize"
-            android:exported="false"
-            android:label="@string/title_activity_login"
-            android:theme="@style/Theme.GSecurity.Fullscreen" />
-        <activity
             android:name=".Activities.Activity_LoadScreen"
             android:exported="false" />
     </application>
