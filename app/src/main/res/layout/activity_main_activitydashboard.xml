@@ -20,12 +20,12 @@
         app:layout_constraintVertical_bias="0.194" />
 
     <EditText
-        android:background="@color/white"
+        android:id="@+id/editText3"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
-        app:layout_constraintStart_toEndOf="@+id/imageView"
-        app:layout_constraintTop_toTopOf="@+id/imageView">
+        app:layout_constraintStart_toEndOf="@+id/imageView">
 
     </EditText>
 
@@ -42,23 +42,19 @@
 
     <EditText
         android:id="@+id/editText2"
-        android:background="@color/white"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
-        app:layout_constraintStart_toEndOf="@+id/imageView2"
-        app:layout_constraintTop_toBottomOf="@+id/imageView"
-        app:layout_constraintVertical_bias="0.55" />
+        app:layout_constraintStart_toEndOf="@+id/imageView2" />
 
 
     <EditText
-        android:background="@color/white"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
+        android:background="@color/white"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
-        app:layout_constraintStart_toEndOf="@+id/imageView3"
-        app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.461" />
+        app:layout_constraintStart_toEndOf="@+id/imageView3" />
 
     <TextView
         android:id="@+id/textView"
@@ -96,6 +92,7 @@
         android:layout_width="70dp"
         android:layout_height="70dp"
         app:layout_constraintEnd_toEndOf="@+id/imageView2"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/imageView2"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
         app:srcCompat="@drawable/baseline_person_24" />
