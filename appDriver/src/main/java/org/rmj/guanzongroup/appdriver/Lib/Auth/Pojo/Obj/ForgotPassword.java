@@ -1,4 +1,4 @@
-package org.rmj.guanzongroup.appdriver.Lib.Auth.Obj;
+package org.rmj.guanzongroup.appdriver.Lib.Auth.Pojo.Obj;
 
 import android.app.Application;
 

@@ -1,4 +1,4 @@
-package org.rmj.guanzongroup.appdriver.Lib.Auth.Obj;
+package org.rmj.guanzongroup.appdriver.Lib.Auth.Pojo.Obj;
 
 import static org.rmj.guanzongroup.appdriver.Api.APIResult.SERVER_NO_RESPONSE;
 import static org.rmj.guanzongroup.appdriver.Api.APIResult.getErrorMessage;
@@ -11,9 +11,7 @@ import org.rmj.guanzongroup.appdriver.Api.APIAddress;
 import org.rmj.guanzongroup.appdriver.Api.HttpHeaders;
 import org.rmj.guanzongroup.appdriver.Api.WebClient;
 import org.rmj.guanzongroup.appdriver.Config.AppConfig;
-import org.rmj.guanzongroup.appdriver.Data.Dao.DAccountInfo;
 import org.rmj.guanzongroup.appdriver.Data.Entity.EAccountInfo;
-import org.rmj.guanzongroup.appdriver.Data.GGC_SecSysDb;
 import org.rmj.guanzongroup.appdriver.Etc.AppConstants;
 import org.rmj.guanzongroup.appdriver.Lib.Account.AccountSession;
 import org.rmj.guanzongroup.appdriver.Lib.Auth.Model.GAccount;
