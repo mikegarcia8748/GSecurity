@@ -12,9 +12,6 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GSecurity">
         <activity
-            android:name=".Activities.MainActivity"
-            android:exported="false" />
-        <activity
             android:name=".Activity_LoadScreen"
             android:exported="true" />
         <activity
