@@ -20,7 +20,7 @@
         app:layout_constraintVertical_bias="0.194" />
 
     <EditText
-        style="@style/OutlinedBox"
+        android:background="@color/white"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/imageView"
@@ -42,7 +42,7 @@
 
     <EditText
         android:id="@+id/editText2"
-        style="@style/OutlinedBox"
+        android:background="@color/white"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/imageView2"
@@ -50,15 +50,15 @@
         app:layout_constraintTop_toBottomOf="@+id/imageView"
         app:layout_constraintVertical_bias="0.55" />
 
+
     <EditText
-        style="@style/OutlinedBox"
+        android:background="@color/white"
         android:layout_width="340dp"
         android:layout_height="wrap_content"
         app:layout_constraintBottom_toBottomOf="@+id/imageView3"
         app:layout_constraintStart_toEndOf="@+id/imageView3"
         app:layout_constraintTop_toBottomOf="@+id/imageView2"
-        app:layout_constraintVertical_bias="0.55" />
-
+        app:layout_constraintVertical_bias="0.461" />
 
     <TextView
         android:id="@+id/textView"
