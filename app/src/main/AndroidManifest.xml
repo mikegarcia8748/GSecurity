@@ -23,6 +23,8 @@
         <activity
             android:name=".Activity_Login"
             android:exported="true" />
+        <activity android:name=".Activity_ForgotPassword"
+            android:exported="false"/>
     </application>
 
 </manifest>

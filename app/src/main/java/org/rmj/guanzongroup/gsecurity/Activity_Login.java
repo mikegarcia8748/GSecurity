@@ -10,14 +10,22 @@ import android.widget.TextView;
 public class  Activity_Login extends AppCompatActivity {
 
     TextView CreatNewAccount;
+    TextView forgotmypassword;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
-        CreatNewAccount=findViewById(R.id.createAnAccount);
+        forgotmypassword=findViewById(R.id.forgotpassword);
+        forgotmypassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Activity_Login.this,Activity_ForgotPassword.class));
+            }
+        });
 
+        CreatNewAccount=findViewById(R.id.createAnAccount);
         CreatNewAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
