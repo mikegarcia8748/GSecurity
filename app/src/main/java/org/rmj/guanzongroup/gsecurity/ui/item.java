@@ -1,11 +1,14 @@
-public class dashboarditem {
+package org.rmj.guanzongroup.gsecurity.ui;
+
+public class item {
     String name;
 
-    public dashboarditem(String name, String email, int image) {
+    public item(String name, int image) {
         this.name = name;
-        this.email = email;
         this.image = image;
     }
+
+    int image;
 
     public String getName() {
         return name;
@@ -15,14 +18,6 @@ public class dashboarditem {
         this.name = name;
     }
 
-    public String getEmail() {
-        return email;
-    }
-
-    public void setEmail(String email) {
-        this.email = email;
-    }
-
     public int getImage() {
         return image;
     }
@@ -30,8 +25,4 @@ public class dashboarditem {
     public void setImage(int image) {
         this.image = image;
     }
-
-    String email;
-    int image;
-
 }
