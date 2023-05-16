@@ -10,6 +10,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import org.rmj.guanzongroup.gsecurity.Activities.MainActivity;
+
 public class Activity_ForgotPassword extends AppCompatActivity {
 
     EditText minputEmail;
@@ -34,7 +36,7 @@ public class Activity_ForgotPassword extends AppCompatActivity {
 
 
 
-                if (TextUtils.isEmpty(email)){
+                if (TextUtils.isEmpty(email)) {
                     minputEmail.setError("Email is required");
                     return;
                 }
