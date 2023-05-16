@@ -8,6 +8,6 @@ import org.rmj.guanzongroup.appdriver.Data.Entity.EAccountInfo;
 //@Dao
 public interface DAccountInfo {
 
-    @Insert
-    void Save(EAccountInfo foVal);
+//    @Insert
+//    void Save(EAccountInfo foVal);
 }
