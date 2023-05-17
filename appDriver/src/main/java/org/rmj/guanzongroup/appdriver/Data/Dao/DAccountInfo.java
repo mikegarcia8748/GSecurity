@@ -5,7 +5,7 @@ import androidx.room.Insert;
 
 import org.rmj.guanzongroup.appdriver.Data.Entity.EAccountInfo;
 
-@Dao
+//@Dao
 public interface DAccountInfo {
 
 //    @Insert
