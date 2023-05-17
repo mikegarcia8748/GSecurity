@@ -1,16 +1,14 @@
-package org.rmj.guanzongroup.gsecurity.Activities;
+package org.rmj.guanzongroup.gsecurity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
 
-import org.rmj.guanzongroup.gsecurity.R;
-
-public class MainActivity extends AppCompatActivity {
+public class ActivityDashboard extends AppCompatActivity {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_login);
+        setContentView(R.layout.activity_dashboard);
     }
 }

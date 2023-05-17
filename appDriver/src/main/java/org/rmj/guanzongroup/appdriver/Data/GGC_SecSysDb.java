@@ -4,13 +4,9 @@ import android.content.Context;
 import android.util.Log;
 
 import androidx.annotation.NonNull;
-import androidx.room.Database;
 import androidx.room.Room;
 import androidx.room.RoomDatabase;
 import androidx.sqlite.db.SupportSQLiteDatabase;
-
-import org.rmj.guanzongroup.appdriver.Data.Dao.DAccountInfo;
-import org.rmj.guanzongroup.appdriver.Data.Entity.EItinerary;
 
 //@Database(entities = {
 //        EItinerary.class}, version = 1)

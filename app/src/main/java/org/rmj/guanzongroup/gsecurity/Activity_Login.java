@@ -40,7 +40,7 @@ public class  Activity_Login extends AppCompatActivity {
         CreatNewAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             startActivity(new Intent(Activity_Login.this,registerActivity.class ));
+             startActivity(new Intent(Activity_Login.this,Activity_CreateAccount.class ));
             }
         });
         login.setOnClickListener(new View.OnClickListener() {
