@@ -80,7 +80,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/inputEmail"
+        android:id="@+id/userrrrnameee"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="20dp"
@@ -108,10 +108,10 @@
         android:inputType="textEmailAddress"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/passswooordds"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+        app:layout_constraintStart_toStartOf="@+id/passswooordds"
+        app:layout_constraintTop_toBottomOf="@+id/passswooordds" />
 
     <EditText
         android:id="@+id/inputEmail10"
@@ -144,7 +144,7 @@
         app:layout_constraintTop_toBottomOf="@+id/inputEmail10" />
 
     <EditText
-        android:id="@+id/inputPassword"
+        android:id="@+id/passswooordds"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
@@ -155,10 +155,10 @@
 
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
+        app:layout_constraintEnd_toEndOf="@+id/userrrrnameee"
         app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="@+id/inputEmail"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+        app:layout_constraintStart_toStartOf="@+id/userrrrnameee"
+        app:layout_constraintTop_toBottomOf="@+id/userrrrnameee" />
 
     <TextView
         android:id="@+id/textView2"
@@ -167,10 +167,10 @@
         android:text="Last Name"
         android:textColor="@color/black"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/inputEmail"
-        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
+        app:layout_constraintBottom_toTopOf="@+id/userrrrnameee"
+        app:layout_constraintEnd_toEndOf="@+id/userrrrnameee"
         app:layout_constraintHorizontal_bias="0.01"
-        app:layout_constraintStart_toStartOf="@+id/inputEmail" />
+        app:layout_constraintStart_toStartOf="@+id/userrrrnameee" />
 
     <TextView
         android:id="@+id/textView4"
@@ -180,10 +180,10 @@
         style="@style/Label_TextFieldHint"
         android:textColor="@color/black"
         android:textSize="15dp"
-        app:layout_constraintBottom_toTopOf="@+id/inputPassword"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintBottom_toTopOf="@+id/passswooordds"
+        app:layout_constraintEnd_toEndOf="@+id/passswooordds"
         app:layout_constraintHorizontal_bias="0.01"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword" />
+        app:layout_constraintStart_toStartOf="@+id/passswooordds" />
 
     <TextView
         android:id="@+id/textView7"
@@ -230,7 +230,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="First Name"
-        app:layout_constraintBottom_toTopOf="@+id/inputPassword"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword" />
+        app:layout_constraintBottom_toTopOf="@+id/passswooordds"
+        app:layout_constraintStart_toStartOf="@+id/passswooordds" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

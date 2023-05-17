@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Theme.GSecurity"
-    tools:context=".Activity_Login">
+    tools:context=".ActivityLogin">
 
 
     <com.google.android.material.appbar.AppBarLayout
@@ -26,13 +26,13 @@
         android:textSize="35sp"
         android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
-        app:layout_constraintStart_toStartOf="@+id/inputEmail"
+        app:layout_constraintEnd_toEndOf="@+id/userrrrnameee"
+        app:layout_constraintStart_toStartOf="@+id/userrrrnameee"
         app:layout_constraintTop_toBottomOf="@+id/appBarLayout"
         app:layout_constraintVertical_bias="0.19" />
 
-    <EditText
-        android:id="@+id/inputEmail"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/userrrrnameee"
         android:layout_height="wrap_content"
         android:layout_width="0dp"
         android:layout_marginStart="20dp"
@@ -49,39 +49,40 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
 
-    <EditText
-        android:id="@+id/inputPassword"
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/passswooordds"
         style="@style/OutlinedBox"
-        android:layout_height="wrap_content"
-        android:inputType="textPassword"
         android:layout_width="0dp"
-        android:layout_marginTop="40dp"
-        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="35dp"
+        android:inputType="textPassword"
+        app:layout_constraintEnd_toEndOf="@+id/userrrrnameee"
         app:layout_constraintHorizontal_bias="0.484"
-        app:layout_constraintStart_toStartOf="@+id/inputEmail"
-        app:layout_constraintTop_toBottomOf="@+id/inputEmail" />
+        app:layout_constraintStart_toStartOf="@+id/userrrrnameee"
+        app:layout_constraintTop_toBottomOf="@+id/userrrrnameee" />
 
     <TextView
         android:id="@+id/textView2"
+        style="@style/Label_TextFieldHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_marginBottom="3dp"
         android:text="Username"
-        style="@style/Label_TextFieldHint"
-        app:layout_constraintBottom_toTopOf="@+id/inputEmail"
-        app:layout_constraintEnd_toEndOf="@+id/inputEmail"
-        app:layout_constraintHorizontal_bias="0.01"
-        app:layout_constraintStart_toStartOf="@+id/inputEmail" />
+        app:layout_constraintBottom_toTopOf="@+id/userrrrnameee"
+        app:layout_constraintEnd_toEndOf="@+id/userrrrnameee"
+        app:layout_constraintHorizontal_bias="0.009"
+        app:layout_constraintStart_toStartOf="@+id/userrrrnameee" />
 
     <TextView
         android:id="@+id/textView4"
+        style="@style/Label_TextFieldHint"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Password"
-        style="@style/Label_TextFieldHint"
-        app:layout_constraintBottom_toTopOf="@+id/inputPassword"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintBottom_toTopOf="@+id/passswooordds"
+        app:layout_constraintEnd_toEndOf="@+id/passswooordds"
         app:layout_constraintHorizontal_bias="0.01"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword" />
+        app:layout_constraintStart_toStartOf="@+id/passswooordds" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/forgotpassword"
@@ -91,10 +92,10 @@
         android:text="Forgot Password"
         android:textColor="@color/black"
         android:textSize="10sp"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/passswooordds"
         app:layout_constraintHorizontal_bias="0.97"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/passswooordds" />
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/createAnAccount"
@@ -106,22 +107,22 @@
         android:textSize="10sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword"
-        app:layout_constraintTop_toBottomOf="@+id/inputPassword" />
+        app:layout_constraintStart_toStartOf="@+id/passswooordds"
+        app:layout_constraintTop_toBottomOf="@+id/passswooordds" />
 
     <Button
-        android:id="@+id/loginaccount"
+        android:id="@+id/LOGIN"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="90dp"
-        android:layout_marginTop="28dp"
+        android:layout_marginTop="80dp"
         android:layout_marginEnd="100dp"
         android:background="@drawable/bg"
         android:text="Login"
         android:textColor="#F6EDED"
-        app:layout_constraintEnd_toEndOf="@+id/inputPassword"
+        app:layout_constraintEnd_toEndOf="@+id/passswooordds"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/inputPassword"
-        app:layout_constraintTop_toBottomOf="@+id/forgotpassword" />
+        app:layout_constraintStart_toStartOf="@+id/passswooordds"
+        app:layout_constraintTop_toBottomOf="@+id/passswooordds" />
 </androidx.constraintlayout.widget.ConstraintLayout>
 
