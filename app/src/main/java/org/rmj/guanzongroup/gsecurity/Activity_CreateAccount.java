@@ -116,13 +116,13 @@ public class Activity_CreateAccount extends AppCompatActivity {
         }
         else if (password1Etv.length() < 8 || password1Etv.length() > 16) {
             password1Etv.requestFocus();
-            password1Etv.setError("Password must be between 8 and 16 characters");
+            password1Etv.setError("Password must be between 8-16 characters");
             return false;
 
 
         } else if  (password2Etv.length() < 8 || password2Etv.length() > 16){
             password2Etv.requestFocus();
-            password2Etv.setError("Password must be between 8 and 16 characters");
+            password2Etv.setError("Password must be between 8-16 characters");
             return false;
 
 
