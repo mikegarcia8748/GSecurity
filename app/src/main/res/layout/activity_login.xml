@@ -6,6 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:theme="@style/Theme.GSecurity"
+    android:background="@drawable/whiteorange"
     tools:context=".Activity_Login">
 
 

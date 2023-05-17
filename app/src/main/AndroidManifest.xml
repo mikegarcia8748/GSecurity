@@ -13,7 +13,7 @@
         android:theme="@style/Theme.GSecurity" >
         <activity
             android:name=".Activity_CreateAccount"
-            android:exported="false" />
+            android:exported="true" />
         <activity
             android:name=".ActivityDashboard"
             android:exported="false" />
@@ -22,9 +22,6 @@
             android:exported="false" />
         <activity
             android:name=".Activity_LoadScreen"
-            android:exported="false" />
-        <activity
-            android:name=".registerActivity"
             android:exported="true" />
         <activity
             android:name=".Activity_Login"
