@@ -2,21 +2,16 @@ package org.rmj.guanzongroup.gsecurity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import android.content.Intent;
 import android.os.Bundle;
-import android.text.TextUtils;
+import android.util.Patterns;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
-import android.widget.TextView;
-
-import org.rmj.guanzongroup.gsecurity.Activities.MainActivity;
+import android.widget.Toast;
 
 public class Activity_ForgotPassword extends AppCompatActivity {
-
-    EditText minputEmail;
-    Button mretrievepass;
-    TextView mtextView2;
+    EditText email;
+    Button login;
 
 
     @Override
@@ -24,25 +19,28 @@ public class Activity_ForgotPassword extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_forgot_password);
 
-        minputEmail = findViewById(R.id.inputEmail);
-        mretrievepass = findViewById(R.id.retrievepass);
-        mtextView2 = findViewById(R.id.textView2);
+        email = findViewById(R.id.email);
+        login = findViewById(R.id.login);
 
-        mretrievepass.setOnClickListener(new View.OnClickListener() {
+        login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String email = minputEmail.getText().toString().trim();
-                startActivity(new Intent(getApplicationContext(),Activity_ForgotPassword.class));
-
-
-
-                if (TextUtils.isEmpty(email)) {
-                    minputEmail.setError("Email is required");
-                    return;
-                }
-
+                validateEmailAddress(email);
             }
         });
-
     }
+
+    private boolean validateEmailAddress(EditText email){
+        String emailInput = this.email.getText().toString();
+
+        if (!emailInput.isEmpty() && Patterns.EMAIL_ADDRESS.matcher(emailInput).matches()){
+            Toast.makeText(this, "Password Retrieved", Toast.LENGTH_SHORT).show();
+            return true;
+        }else {
+            Toast.makeText(this, "Invalid Email Address", Toast.LENGTH_SHORT).show();
+            return false;
+        }
+    }
+
 }
+
