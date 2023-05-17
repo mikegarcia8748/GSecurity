@@ -3,7 +3,7 @@ package org.rmj.guanzongroup.appdriver.Data.Dao;
 import androidx.room.Dao;
 import androidx.room.Insert;
 
-import org.rmj.guanzongroup.appdriver.Data.Entity.EItinerary;
+import org.rmj.guanzongroup.appdriver.Lib.Auth.Entity.EItinerary;
 
 @Dao
 public interface DItinerary {

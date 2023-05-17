@@ -1,4 +1,4 @@
-package org.rmj.guanzongroup.appdriver.Data.Entity;
+package org.rmj.guanzongroup.appdriver.Lib.Auth.Entity;
 
 import androidx.room.Entity;
 
