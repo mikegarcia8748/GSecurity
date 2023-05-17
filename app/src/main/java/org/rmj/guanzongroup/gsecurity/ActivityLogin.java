@@ -50,15 +50,15 @@ public class ActivityLogin extends AppCompatActivity {
                 if(userEdt.getText().toString().isEmpty() && passEdt.getText().toString().isEmpty()) {
                     Toast.makeText(ActivityLogin.this, "Wrong Email or Password", Toast.LENGTH_SHORT).show();
                 }else if(userEdt.getText().toString().equals("admin") && passEdt.getText().toString().equals("admin")){
-                    startActivity(new Intent(ActivityLogin.this,MainActivity.class));
+                    startActivity(new Intent(ActivityLogin.this,successlogin.class));
                 }
             }
         });
     }
     private void initView() {
-        userEdt = findViewById(R.id.userrrrnameee);
-        passEdt = findViewById(R.id.passswooordds);
-        loginBtn = findViewById (R.id.LOGIN);
+        userEdt = findViewById(R.id.inputEmail);
+        passEdt = findViewById(R.id.inputPassword);
+        loginBtn = findViewById (R.id.login1);
 
     }
 }
