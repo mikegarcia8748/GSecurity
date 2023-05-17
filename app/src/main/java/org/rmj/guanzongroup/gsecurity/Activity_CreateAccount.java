@@ -42,7 +42,7 @@ public class Activity_CreateAccount extends AppCompatActivity {
               boolean check = validateinfo(name1,name2,name3,email,password1etv,number);
 
               if (check==true){
-                  Toast.makeText(Activity_CreateAccount.this, "", Toast.LENGTH_SHORT).show();
+                  Toast.makeText(Activity_CreateAccount.this, "Log in Successful!", Toast.LENGTH_SHORT).show();
 
               }
               else {
