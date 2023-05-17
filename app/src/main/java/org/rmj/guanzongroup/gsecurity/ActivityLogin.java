@@ -47,9 +47,8 @@ public class ActivityLogin extends AppCompatActivity {
         loginBtn.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!userEdt.getText().toString().isEmpty() && !passEdt.getText().toString().isEmpty()) {
+                if(userEdt.getText().toString().isEmpty() && passEdt.getText().toString().isEmpty()) {
                     Toast.makeText(ActivityLogin.this, "Wrong Email or Password", Toast.LENGTH_SHORT).show();
-
                 }else if(userEdt.getText().toString().equals("admin") && passEdt.getText().toString().equals("admin")){
                     startActivity(new Intent(ActivityLogin.this,MainActivity.class));
                 }
