@@ -10,6 +10,8 @@ import android.widget.EditText;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import org.rmj.guanzongroup.gsecurity.Activities.MainActivity;
+
 public class ActivityLogin extends AppCompatActivity {
     private EditText userEdt,passEdt;
     private Button loginBtn;
@@ -50,7 +52,7 @@ public class ActivityLogin extends AppCompatActivity {
                 if(userEdt.getText().toString().isEmpty() && passEdt.getText().toString().isEmpty()) {
                     Toast.makeText(ActivityLogin.this, "Could not find Email or Password", Toast.LENGTH_SHORT).show();
                 }else if(userEdt.getText().toString().equals("admin") && passEdt.getText().toString().equals("admin")){
-                    startActivity(new Intent(ActivityLogin.this,Activity_d.class));
+                    startActivity(new Intent(ActivityLogin.this, MainActivity.class));
                 }
             }
         });

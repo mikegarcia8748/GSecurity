@@ -12,10 +12,7 @@
         android:supportsRtl="true"
         android:theme="@style/Theme.GSecurity">
         <activity
-            android:name=".Adapter.Activty_dashboardNew"
-            android:exported="false" />
-        <activity
-            android:name=".successlogin"
+            android:name=".MainActivityDashboard"
             android:exported="false" />
         <activity
             android:name=".Activity_CreateAccount"
