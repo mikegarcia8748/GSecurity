@@ -38,7 +38,7 @@ public class ActivityLogin extends AppCompatActivity {
         CreatNewAccount.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-             startActivity(new Intent(ActivityLogin.this,Activity_Login.class ));
+             startActivity(new Intent(ActivityLogin.this,Activity_CreateAccount.class ));
             }
         });
 
@@ -48,9 +48,9 @@ public class ActivityLogin extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if(userEdt.getText().toString().isEmpty() && passEdt.getText().toString().isEmpty()) {
-                    Toast.makeText(ActivityLogin.this, "Wrong Email or Password", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(ActivityLogin.this, "Could not find Email or Password", Toast.LENGTH_SHORT).show();
                 }else if(userEdt.getText().toString().equals("admin") && passEdt.getText().toString().equals("admin")){
-                    startActivity(new Intent(ActivityLogin.this,successlogin.class));
+                    startActivity(new Intent(ActivityLogin.this,Activity_d.class));
                 }
             }
         });
