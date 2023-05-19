@@ -5,7 +5,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/whiteorange"
+    android:background="@drawable/blackorange"
     tools:context=".Activity_CreateAccount">
 
 
@@ -17,7 +17,7 @@
         android:layout_height="wrap_content"
         android:layout_marginTop="32dp"
         android:text="G-Security"
-        android:textColor="#000000"
+        android:textColor="@color/white"
         android:textSize="35sp"
         android:textStyle="normal"
         app:layout_constraintEnd_toEndOf="parent"
@@ -30,6 +30,7 @@
         style="@style/OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:layout_marginStart="10dp"
         android:layout_marginTop="50dp"
         android:layout_marginEnd="10dp"
@@ -43,6 +44,7 @@
         style="@style/OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
@@ -56,6 +58,7 @@
         style="@style/OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
@@ -68,6 +71,7 @@
         android:id="@+id/emailEtv"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         style="@style/OutlinedBox"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
@@ -81,6 +85,7 @@
         style="@style/OutlinedBox"
         android:layout_height="wrap_content"
         android:layout_width="0dp"
+        android:textColor="@color/white"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
         android:inputType="number"
@@ -93,6 +98,7 @@
         style="@style/OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
@@ -107,6 +113,7 @@
         style="@style/OutlinedBox"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:textColor="@color/white"
         android:layout_marginStart="10dp"
         android:layout_marginTop="30dp"
         android:layout_marginEnd="10dp"
@@ -138,6 +145,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="Last Name"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/name1etv"
         app:layout_constraintStart_toStartOf="@+id/name1etv" />
 
@@ -147,6 +155,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="First Name"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/name2etv"
         app:layout_constraintStart_toStartOf="@+id/name2etv"
         tools:ignore="MissingConstraints" />
@@ -157,6 +166,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="Middle Name"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/name3etv"
         app:layout_constraintStart_toStartOf="@+id/name3etv" />
 
@@ -166,6 +176,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="Email"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/emailEtv"
         app:layout_constraintStart_toStartOf="@+id/emailEtv"
         tools:ignore="MissingConstraints" />
@@ -176,6 +187,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="Mobile no."
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/numberEtv"
         app:layout_constraintStart_toStartOf="@+id/numberEtv" />
 
@@ -185,6 +197,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="Password"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/password1Etv"
         app:layout_constraintStart_toStartOf="@+id/password1Etv" />
 
@@ -194,6 +207,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="4dp"
         android:text="Re-Type Password"
+        android:textColor="@color/white"
         app:layout_constraintBottom_toTopOf="@+id/password2Etv"
         app:layout_constraintStart_toStartOf="@+id/password2Etv" />
 
