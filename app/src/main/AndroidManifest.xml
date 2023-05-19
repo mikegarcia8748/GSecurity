@@ -41,6 +41,10 @@
             android:exported="true" />
 
         <activity
+            android:name=".Activity_Dialog"
+            android:exported="true" />
+
+        <activity
             android:name=".Activity_ForgotPassword"
             android:exported="true" />
     </application>
