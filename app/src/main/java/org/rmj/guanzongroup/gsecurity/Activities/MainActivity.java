@@ -37,6 +37,9 @@ public class MainActivity extends AppCompatActivity {
         loNames.add("Dela Cruz, Melanie");
         loNames.add("Dela Cruz, Jayson");
         loNames.add("Dela Cruz, Marjori");
+        loNames.add("Raymundo,Aldrin");
+        loNames.add("Raymundo,Aldrin");
+
 
         LinearLayoutManager loManager = new LinearLayoutManager(MainActivity.this);
         loManager.setOrientation(RecyclerView.VERTICAL);
