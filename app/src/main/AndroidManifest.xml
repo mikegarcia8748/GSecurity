@@ -23,7 +23,6 @@
         <activity
             android:name=".MainActivityDashboard"
             android:exported="false" />
-            android:exported="true" />
         <activity
             android:name=".Activity_CreateAccount"
             android:exported="true" />
