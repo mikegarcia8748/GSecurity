@@ -31,6 +31,9 @@ public class MainActivity extends AppCompatActivity {
         RecyclerView recyclerView = findViewById(R.id.recyclerview);
 
         List<String> loNames = new ArrayList<>();
+        loNames.add("Raymundo,Jordan");
+        loNames.add("Tamonte,Aldrin");
+        loNames.add("Aquino , Marc Adrian");
         loNames.add("Dela Cruz, Melanie");
         loNames.add("Dela Cruz, Jayson");
         loNames.add("Dela Cruz, Marjori");

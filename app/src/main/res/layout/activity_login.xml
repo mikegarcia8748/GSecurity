@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:theme="@style/Theme.GSecurity"
     android:background="@drawable/blackorange"
-    tools:context=".Activity_Login">
+    tools:context=".ActivityLogin">
 
 
     <com.google.android.material.appbar.AppBarLayout
