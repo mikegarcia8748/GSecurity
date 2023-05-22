@@ -29,7 +29,7 @@ public class Activity_Dialog extends AppCompatActivity {
         AlertDialog.Builder alertDialog = new AlertDialog.Builder(Activity_Dialog.this);
 
         alertDialog.setView(alertCustomDialog);
-        cancelButton = (ImageButton) alertCustomDialog.findViewById(R.id.cancelId);
+        cancelButton = (ImageButton) alertCustomDialog.findViewById(R.id.cancelId)  ;
         okbtn = (Button) alertCustomDialog.findViewById(R.id.ok_btn);
 
         final AlertDialog dialog = alertDialog.create();
