@@ -1,11 +1,11 @@
-package org.rmj.guanzongroup.appdriver.Lib.Auth.Entity;
+package org.rmj.guanzongroup.appdriver.Data.Entity;
 
 import androidx.annotation.NonNull;
 import androidx.room.ColumnInfo;
 import androidx.room.Entity;
 import androidx.room.PrimaryKey;
 
-@Entity
+@Entity(tableName = "User_Info_Master")
 public class EAccountInfo {
 
     @PrimaryKey

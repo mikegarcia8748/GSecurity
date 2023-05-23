@@ -11,7 +11,7 @@ import org.rmj.guanzongroup.appdriver.Api.APIAddress;
 import org.rmj.guanzongroup.appdriver.Api.HttpHeaders;
 import org.rmj.guanzongroup.appdriver.Api.WebClient;
 import org.rmj.guanzongroup.appdriver.Config.AppConfig;
-import org.rmj.guanzongroup.appdriver.Lib.Auth.Entity.EAccountInfo;
+import org.rmj.guanzongroup.appdriver.Data.Entity.EAccountInfo;
 import org.rmj.guanzongroup.appdriver.Etc.AppConstants;
 import org.rmj.guanzongroup.appdriver.Lib.Account.AccountSession;
 import org.rmj.guanzongroup.appdriver.Lib.Auth.Model.GAccount;
