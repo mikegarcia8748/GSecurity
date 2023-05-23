@@ -1,4 +1,4 @@
-package org.rmj.guanzongroup.gsecurity.Etc;
+package org.rmj.guanzongroup.gsecurity;
 
 import androidx.appcompat.app.AppCompatActivity;
 
