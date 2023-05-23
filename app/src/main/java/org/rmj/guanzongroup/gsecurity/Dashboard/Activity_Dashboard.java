@@ -1,5 +1,6 @@
 package org.rmj.guanzongroup.gsecurity.Dashboard;
 
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.lifecycle.ViewModelProvider;
 
@@ -9,6 +10,7 @@ import org.rmj.guanzongroup.gsecurity.R;
 import org.rmj.guanzongroup.gsecurity.ViewModel.VMDashboard;
 
 public class Activity_Dashboard extends AppCompatActivity {
+
 
     private VMDashboard mViewModel;
 

@@ -1,9 +1,202 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@drawable/blackorange"
     tools:context=".Authentication.Activity_CreateAccount">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="83dp"
+        android:layout_height="72dp"
+        app:layout_constraintBottom_toBottomOf="@+id/gsecurity"
+        app:layout_constraintEnd_toStartOf="@+id/gsecurity"
+        app:layout_constraintTop_toTopOf="@+id/gsecurity"
+        app:srcCompat="@drawable/guanzontransparent" />
+
+
+    <TextView
+        android:id="@+id/gsecurity"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="32dp"
+        android:text="-Security"
+        android:textColor="@color/colorPrimaryLight"
+        android:textSize="35sp"
+        android:textStyle="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.69"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/name1etv"
+        style="@style/OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="50dp"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/gsecurity" />
+
+    <EditText
+        android:id="@+id/name2etv"
+        style="@style/OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/name1etv"
+        app:layout_constraintStart_toStartOf="@+id/name1etv"
+        app:layout_constraintTop_toBottomOf="@+id/name1etv" />
+
+    <EditText
+        android:id="@+id/name3etv"
+        style="@style/OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:digits="abcdefghijklmnopqrstuvwxyz ABCDEFGHIJKLMNOPQRSTUVWXYZ"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/name2etv"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name2etv" />
+
+    <EditText
+        android:id="@+id/emailEtv"
+        style="@style/OutlinedBox"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/name3etv" />
+
+    <EditText
+        android:id="@+id/numberEtv"
+        style="@style/OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:inputType="number"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/emailEtv"
+        app:layout_constraintTop_toBottomOf="@+id/emailEtv" />
+
+    <EditText
+        android:id="@+id/password1Etv"
+        style="@style/OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:inputType="textPassword"
+        android:password="true"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="@+id/numberEtv"
+        app:layout_constraintStart_toStartOf="@+id/numberEtv"
+        app:layout_constraintTop_toBottomOf="@+id/numberEtv" />
+
+    <EditText
+        android:id="@+id/password2Etv"
+        style="@style/OutlinedBox"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="30dp"
+        android:inputType="textPassword"
+        android:password="true"
+        android:textColor="@color/white"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="@+id/password1Etv"
+        app:layout_constraintTop_toBottomOf="@+id/password1Etv" />
+
+    <Button
+        android:id="@+id/SubmitBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:layout_marginStart="120dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="120dp"
+        android:layout_marginBottom="50dp"
+        android:text="Create Account"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/password2Etv" />
+
+    <TextView
+        android:id="@+id/textView11"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Last Name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/name1etv"
+        app:layout_constraintStart_toStartOf="@+id/name1etv" />
+
+    <TextView
+        android:id="@+id/textView14"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="First Name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/name2etv"
+        app:layout_constraintStart_toStartOf="@+id/name2etv"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView15"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Middle Name"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/name3etv"
+        app:layout_constraintStart_toStartOf="@+id/name3etv" />
+
+    <TextView
+        android:id="@+id/textView12"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Email"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/emailEtv"
+        app:layout_constraintStart_toStartOf="@+id/emailEtv"
+        tools:ignore="MissingConstraints" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Mobile no."
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/numberEtv"
+        app:layout_constraintStart_toStartOf="@+id/numberEtv" />
+
+    <TextView
+        android:id="@+id/textView18"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Password"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/password1Etv"
+        app:layout_constraintStart_toStartOf="@+id/password1Etv" />
+
+    <TextView
+        android:id="@+id/textView19"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Re-Type Password"
+        android:textColor="@color/white"
+        app:layout_constraintBottom_toTopOf="@+id/password2Etv"
+        app:layout_constraintStart_toStartOf="@+id/password2Etv" />
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>

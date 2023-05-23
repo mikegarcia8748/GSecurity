@@ -1,21 +1,69 @@
 package org.rmj.guanzongroup.gsecurity.Authentication;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.lifecycle.ViewModelProvider;
 
+import android.content.Intent;
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
+import android.widget.Toast;
 
+import androidx.appcompat.app.AppCompatActivity;
+
+import org.rmj.guanzongroup.gsecurity.Dashboard.Activity_Administrator;
 import org.rmj.guanzongroup.gsecurity.R;
-import org.rmj.guanzongroup.gsecurity.ViewModel.VMLogin;
 
 public class Activity_Login extends AppCompatActivity {
+    private EditText userEdt,passEdt;
+    private Button loginBtn;
 
-    private VMLogin mViewModel;
+    TextView CreatNewAccount;
+    TextView forgotmypassword;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mViewModel = new ViewModelProvider(this).get(VMLogin.class);
         setContentView(R.layout.activity_login);
+
+        initView();
+        setVariable();
+
+        forgotmypassword=findViewById(R.id.forgot);
+        forgotmypassword.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Activity_Login.this, Activity_ForgotPassword.class));
+            }
+        });
+
+        CreatNewAccount=findViewById(R.id.createAcc);
+        CreatNewAccount.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(Activity_Login.this, Activity_CreateAccount.class ));
+            }
+        });
+
+    }
+    private void setVariable () {
+        loginBtn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                if(userEdt.getText().toString().isEmpty() && passEdt.getText().toString().isEmpty()) {
+                    Toast.makeText(Activity_Login.this, "Could not find Email or Password", Toast.LENGTH_SHORT).show();
+                }else if(userEdt.getText().toString().equals("admin") && passEdt.getText().toString().equals("admin")){
+                    startActivity(new Intent(Activity_Login.this, Activity_Administrator.class));
+                }
+            }
+        });
+    }
+    private void initView() {
+        userEdt = findViewById(R.id.inputEmail);
+        passEdt = findViewById(R.id.inputPassword);
+        loginBtn = findViewById (R.id.login);
+
     }
 }
+
