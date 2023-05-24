@@ -35,9 +35,6 @@ public class AdapterPersonnel extends AppCompatActivity {
         loNames.add("Raymundo, Jordan");
         loNames.add("Tamonte, Aldrin");
         loNames.add("Aquino, Marc Adrian");
-        loNames.add("Dela Cruz, Melanie");
-        loNames.add("Dela Cruz, Jayson");
-        loNames.add("Dela Cruz, Marjori");
         loNames.add("Raymundo, Kelly");
         loNames.add("Carilla, Jerome");
         loNames.add("Romero, Marc");
