@@ -1,12 +1,11 @@
 package org.rmj.guanzongroup.gsecurity.Adapter;
 
-public class AdapterPersonnel {
+import android.os.Bundle;
+import android.widget.TextView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
-
-import android.os.Bundle;
-import android.widget.TextView;
 
 import org.rmj.guanzongroup.gsecurity.R;
 
@@ -14,6 +13,8 @@ import java.text.DateFormat;
 import java.util.ArrayList;
 import java.util.Calendar;
 import java.util.List;
+
+
 
 public class AdapterPersonnel extends AppCompatActivity {
 
@@ -47,5 +48,6 @@ public class AdapterPersonnel extends AppCompatActivity {
         loManager.setOrientation(RecyclerView.VERTICAL);
         recyclerView.setLayoutManager(loManager);
         recyclerView.setAdapter(new AdapterItinerary(loNames));
+      }
     }
-}
+
