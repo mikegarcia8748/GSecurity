@@ -37,6 +37,10 @@
             android:exported="true"
             android:screenOrientation="userPortrait" />
         <activity
+            android:name=".Adapter.AdapterPersonnel"
+            android:exported="true"
+            android:screenOrientation="userPortrait"/>
+        <activity
             android:name=".Activity_SplashScreen"
             android:exported="true"
             android:screenOrientation="userPortrait">
