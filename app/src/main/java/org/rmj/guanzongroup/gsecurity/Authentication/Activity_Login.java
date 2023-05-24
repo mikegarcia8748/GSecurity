@@ -11,7 +11,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import org.rmj.guanzongroup.gsecurity.Dashboard.Activity_Administrator;
+import org.rmj.guanzongroup.gsecurity.Adapter.AdapterPersonnel;
 import org.rmj.guanzongroup.gsecurity.R;
 
 public class Activity_Login extends AppCompatActivity {
@@ -54,7 +54,7 @@ public class Activity_Login extends AppCompatActivity {
                 if(userEdt.getText().toString().isEmpty() && passEdt.getText().toString().isEmpty()) {
                     Toast.makeText(Activity_Login.this, "Could not find Email or Password", Toast.LENGTH_SHORT).show();
                 }else if(userEdt.getText().toString().equals("admin") && passEdt.getText().toString().equals("admin")){
-                    startActivity(new Intent(Activity_Login.this, Activity_Administrator.class));
+                    startActivity(new Intent(Activity_Login.this, AdapterPersonnel.class));
                 }
             }
         });
