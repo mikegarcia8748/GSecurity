@@ -55,5 +55,11 @@
     <style name="Theme.GSecurity.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
     <style name="Theme.GSecurity.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
+    <style name="FadeInAnimation">
+        <item name="android:windowEnterAnimation">@anim/fade_in</item>
+    </style>
+
+
+
 
 </resources>
