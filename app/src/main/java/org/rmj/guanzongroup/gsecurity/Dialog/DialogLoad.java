@@ -11,6 +11,7 @@ import com.google.android.material.textview.MaterialTextView;
 
 import org.rmj.guanzongroup.gsecurity.R;
 
+
 public class DialogLoad {
     private AlertDialog poDialogx;
     private final Context context;
@@ -47,3 +48,4 @@ public class DialogLoad {
         }
     }
 }
+

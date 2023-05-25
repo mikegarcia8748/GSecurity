@@ -12,6 +12,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 
 import org.rmj.guanzongroup.gsecurity.Adapter.AdapterPersonnel;
+import org.rmj.guanzongroup.gsecurity.Dialog.DialogLoad;
 import org.rmj.guanzongroup.gsecurity.R;
 
 public class Activity_Login extends AppCompatActivity {

@@ -41,6 +41,14 @@
             android:exported="true"
             android:screenOrientation="userPortrait"/>
         <activity
+            android:name=".Dialog.DialogLoad"
+            android:exported="true"
+            android:screenOrientation="userPortrait"/>
+        <activity
+            android:name=".Dialog.DialogMessage"
+            android:exported="true"
+            android:screenOrientation="userPortrait"/>
+        <activity
             android:name=".Activity_SplashScreen"
             android:exported="true"
             android:screenOrientation="userPortrait">
