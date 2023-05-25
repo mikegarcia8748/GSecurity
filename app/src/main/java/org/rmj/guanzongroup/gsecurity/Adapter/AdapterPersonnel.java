@@ -2,6 +2,7 @@ package org.rmj.guanzongroup.gsecurity.Adapter;
 
 import android.os.Bundle;
 import android.widget.TextView;
+import android.widget.ImageView;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -15,6 +16,7 @@ import java.util.Calendar;
 import java.util.List;
 
 public class AdapterPersonnel extends AppCompatActivity {
+    private ImageView personnelBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
