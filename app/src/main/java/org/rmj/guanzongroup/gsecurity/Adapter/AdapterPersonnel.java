@@ -3,6 +3,10 @@ package org.rmj.guanzongroup.gsecurity.Adapter;
 import android.os.Bundle;
 import android.widget.TextView;
 
+import android.os.Bundle;
+import android.widget.TextView;
+import android.widget.ImageView;
+
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -17,6 +21,7 @@ import java.util.List;
 
 
 public class AdapterPersonnel extends AppCompatActivity {
+    private ImageView personnelBox;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -37,9 +42,6 @@ public class AdapterPersonnel extends AppCompatActivity {
         loNames.add("Aquino, Marc Adrian");
         loNames.add("Raymundo, Kelly");
         loNames.add("Carilla, Jerome");
-        loNames.add("Romero, Marc");
-        loNames.add("Abalos, Aldrin");
-        loNames.add("Kevin, Austria");
 
         LinearLayoutManager loManager = new LinearLayoutManager(this);
         loManager.setOrientation(RecyclerView.VERTICAL);
