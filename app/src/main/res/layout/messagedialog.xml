@@ -26,20 +26,11 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:id="@+id/titledialog"
-            android:text="TITLE"
+            android:id="@+id/title"
+            android:text="SCAN"
             android:textColor="@color/black"
             android:textSize="40sp"
             android:textStyle="bold" />
-
-        <TextView
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="MESSAGGE"
-            android:id="@+id/messagedialog"
-            android:gravity="center"
-            android:textSize="25sp"
-            android:textColor="@color/black"/>
 
         <Button
             android:id="@+id/btnPositive"
@@ -47,7 +38,7 @@
             android:layout_height="wrap_content"
             android:gravity="center"
             android:layout_marginTop="20sp"
-            android:text="Yes"
+            android:text="NFC"
             android:backgroundTint="@color/guanzon_digital_orange"/>
 
         <Button
@@ -55,8 +46,8 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"
-            android:layout_marginTop="20sp"
-            android:text="No"
+            android:layout_marginTop="0sp"
+            android:text="QR Code"
             android:backgroundTint="@color/guanzon_digital_orange"/>
     </LinearLayout>
 
