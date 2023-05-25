@@ -4,9 +4,12 @@ import static androidx.core.content.ContextCompat.startActivity;
 
 import android.content.Intent;
 import android.os.Handler;
+import android.app.AlertDialog;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.ImageButton;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -47,6 +50,7 @@ public class AdapterItinerary extends RecyclerView.Adapter<AdapterItinerary.VHPe
             public void onClick(View v) {
                 Intent intent = new Intent(v.getContext(), DialogMessage.class);
                 v.getContext().startActivity(intent);
+                showScanDialog(v);
             }
         });
     }
@@ -64,5 +68,26 @@ public class AdapterItinerary extends RecyclerView.Adapter<AdapterItinerary.VHPe
             super(itemView);
             lblPersonx = itemView.findViewById(R.id.lbl_personnel);
         }
+    }
+
+    private void showScanDialog(View view) {
+        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
+        View dialogView = LayoutInflater.from(view.getContext()).inflate(R.layout.messagedialog, null);
+
+        builder.setView(dialogView);
+
+        AlertDialog dialog = builder.create();
+        dialog.show();
+
+        ImageButton btnCancel = dialogView.findViewById(R.id.cancelId);
+        Button btnPositive = dialogView.findViewById(R.id.btnPositive);
+        Button btnNegative = dialogView.findViewById(R.id.btnNegative);
+
+        btnCancel.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+            }
+        });
     }
 }
