@@ -3,7 +3,7 @@
     <style name="Theme.GSecurity" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- Primary brand color. -->
         <item name="colorPrimary">@color/colorPrimaryLight</item>
-        <item name="colorPrimaryVariant">@color/colorPrimaryVariantLight</item>
+        <item name="colorPrimaryVariant">@color/colorPrimaryDark</item>
         <item name="colorOnPrimary">@color/black</item>
         <!-- Secondary brand color. -->
         <item name="colorSecondary">@color/colorSecondaryLight</item>

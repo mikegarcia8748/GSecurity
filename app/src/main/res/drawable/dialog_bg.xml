@@ -1,16 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
-<inset xmlns:android="http://schemas.android.com/apk/res/android"
-    android:insetLeft="5dp"
-    android:insetRight="5dp"
-    android:insetBottom="5dp"
-    android:insetTop="5dp">
+<inset xmlns:android="http://schemas.android.com/apk/res/android">
 
     <shape android:shape="rectangle">
-        <corners android:radius="30dp"/>
-        <solid android:color="@color/white"/>
-        <stroke android:width="4dp"
-            android:color="#000000"/>
+        <corners android:radius="10dp"/>
+        <solid android:color="#00000000" /> <!-- Transparent color -->
+        <stroke android:width="5dp"
+            android:color="#F47422"/>
     </shape>
-
 
 </inset>
