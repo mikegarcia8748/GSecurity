@@ -40,7 +40,7 @@
             android:backgroundTint="@color/guanzon_digital_orange"/>
 
         <Button
-            android:id="@+id/btnNegative"
+            android:id="@+id/BtnQRCODE"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:gravity="center"

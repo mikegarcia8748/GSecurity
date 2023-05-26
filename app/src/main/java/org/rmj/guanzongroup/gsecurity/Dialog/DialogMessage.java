@@ -43,7 +43,7 @@ public class DialogMessage {
         lblTitle = view.findViewById(R.id.title);
         btnPositive = view.findViewById(R.id.btnPositive);
         btnPositive.setVisibility(View.GONE);
-        btnNegative = view.findViewById(R.id.btnNegative);
+        btnNegative = view.findViewById(R.id.BtnQRCODE);
         midBorder.setVisibility(View.GONE);
         btnNegative.setVisibility(View.GONE);
     }

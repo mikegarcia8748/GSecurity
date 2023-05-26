@@ -71,7 +71,7 @@ public class AdapterItinerary extends RecyclerView.Adapter<AdapterItinerary.VHPe
 
         ImageButton btnCancel = dialogView.findViewById(R.id.cancelId);
         Button btnPositive = dialogView.findViewById(R.id.btnPositive);
-        Button btnNegative = dialogView.findViewById(R.id.btnNegative);
+        Button btnNegative = dialogView.findViewById(R.id.BtnQRCODE);
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
             @Override
