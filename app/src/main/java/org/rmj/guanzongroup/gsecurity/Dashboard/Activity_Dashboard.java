@@ -1,110 +1,61 @@
 package org.rmj.guanzongroup.gsecurity.Dashboard;
 
-import android.Manifest;
-import android.content.pm.PackageManager;
-import android.hardware.Camera;
-import android.os.Bundle;
-import android.view.SurfaceHolder;
-import android.view.SurfaceView;
-import android.view.View;
-import android.widget.Toast;
-
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.core.app.ActivityCompat;
-import androidx.core.content.ContextCompat;
+import androidx.lifecycle.ViewModelProvider;
 
-import com.google.zxing.BinaryBitmap;
-import com.google.zxing.MultiFormatReader;
-import com.google.zxing.PlanarYUVLuminanceSource;
-import com.google.zxing.Result;
-import com.google.zxing.common.HybridBinarizer;
-import com.google.zxing.qrcode.QRCodeReader;
+import android.content.Intent;
+import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
+
+import com.google.zxing.integration.android.IntentIntegrator;
+import com.google.zxing.integration.android.IntentResult;
 
 import org.rmj.guanzongroup.gsecurity.R;
+import org.rmj.guanzongroup.gsecurity.ViewModel.VMItinerary;
 
-import java.io.IOException;
+public class Activity_Dashboard extends AppCompatActivity {
 
-public class Activity_Dashboard extends AppCompatActivity implements SurfaceHolder.Callback {
+    Button scan_btn;
 
-    private Camera mCamera;
-    private SurfaceView mSurfaceView;
-    private SurfaceHolder mSurfaceHolder;
+    TextView textView;
 
+    private VMItinerary mViewModel;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_dashboard);
+        mViewModel = new ViewModelProvider(this).get(VMItinerary.class);
+        setContentView(R.layout.qr_code_scanner);
 
-        mSurfaceView = findViewById(R.id.recyclerview);
-        mSurfaceHolder = mSurfaceView.getHolder();
-        mSurfaceHolder.addCallback(this);
+        scan_btn = findViewById(R.id.scanner);
+        textView = findViewById(R.id.text);
+
+        scan_btn.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                IntentIntegrator intentIntegrator = new IntentIntegrator(Activity_Dashboard.this);
+                intentIntegrator.setOrientationLocked(false);
+                intentIntegrator.setPrompt("Scan a QR Code");
+                intentIntegrator.setDesiredBarcodeFormats(IntentIntegrator.QR_CODE);
+                intentIntegrator.initiateScan();
+            }
+        });
+
     }
 
     @Override
-    public void surfaceCreated(SurfaceHolder holder) {
-        if (ContextCompat.checkSelfPermission(this, Manifest.permission.CAMERA) == PackageManager.PERMISSION_GRANTED) {
-            startCamera();
-        } else {
-            ActivityCompat.requestPermissions(this, new String[]{Manifest.permission.CAMERA}, 1);
-        }
-    }
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
 
-    @Override
-    public void surfaceChanged(SurfaceHolder holder, int format, int width, int height) {
-        // No need to implement anything here for this example.
-    }
-
-    @Override
-    public void surfaceDestroyed(SurfaceHolder holder) {
-        releaseCamera();
-    }
-
-    private void startCamera() {
-        try {
-            mCamera = Camera.open();
-            mCamera.setPreviewDisplay(mSurfaceHolder);
-            mCamera.setDisplayOrientation(90);
-            mCamera.startPreview();
-        } catch (IOException e) {
-            Toast.makeText(this, "Failed to start camera.", Toast.LENGTH_SHORT).show();
-        }
-    }
-
-    private void releaseCamera() {
-        if (mCamera != null) {
-            mCamera.stopPreview();
-            mCamera.release();
-            mCamera = null;
-        }
-    }
-
-    public void onScanButtonClick(View view) {
-        if (mCamera != null) {
-            mCamera.setOneShotPreviewCallback(new Camera.PreviewCallback() {
-                @Override
-                public void onPreviewFrame(byte[] data, Camera camera) {
-                    Camera.Parameters parameters = camera.getParameters();
-                    Camera.Size size = parameters.getPreviewSize();
-                    int width = size.width;
-                    int height = size.height;
-                    Result result = null;
-                    try {
-                        PlanarYUVLuminanceSource source = new PlanarYUVLuminanceSource(data, width, height, 0, 0, width, height, false);
-                        BinaryBitmap bitmap = new BinaryBitmap(new HybridBinarizer(source));
-                        QRCodeReader reader = new QRCodeReader();
-                        result = reader.decode(bitmap);
-                    } catch (Exception e) {
-                        e.printStackTrace();
-                    }
-                    if (result != null) {
-                        String qrText = result.getText();
-                        Toast.makeText(Activity_Dashboard.this, "QR Code: " + qrText, Toast.LENGTH_SHORT).show();
-                    } else {
-                        Toast.makeText(Activity_Dashboard.this, "Failed to scan QR code.", Toast.LENGTH_SHORT).show();
-                    }
-                    camera.startPreview();
-                }
-            });
+        IntentResult intentResult = IntentIntegrator.parseActivityResult(requestCode,resultCode,data);
+        if (intentResult != null){
+            String contents = intentResult.getContents();
+            if (contents != null){
+                textView.setText(intentResult.getContents());
+            }
+        }else {
+            super.onActivityResult(requestCode, resultCode, data);
         }
     }
 }

@@ -19,8 +19,6 @@ import java.util.Objects;
 
 public class DialogMessage {
 
-}
-
     private AlertDialog poDialogx;
     private MaterialButton btnPositive;
     private MaterialButton btnNegative;
