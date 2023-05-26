@@ -13,6 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.textview.MaterialTextView;
 
+import org.rmj.guanzongroup.gsecurity.Dashboard.Activity_Dashboard;
 import org.rmj.guanzongroup.gsecurity.R;
 
 import java.util.List;
@@ -103,6 +104,24 @@ public class AdapterItinerary extends RecyclerView.Adapter<AdapterItinerary.VHPe
                 view.getContext().startActivity(intent);
             }
         });
+
+        btnPositive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                Intent intent = new Intent(view.getContext(), Activity_Dashboard.class);
+                view.getContext().startActivity(intent);
+            }
+        });
+
+        btnNegative.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                Intent intent = new Intent(view.getContext(), Activity_Dashboard.class);
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 }
 
@@ -111,3 +130,4 @@ public class AdapterItinerary extends RecyclerView.Adapter<AdapterItinerary.VHPe
 
 
 //new code with custom dialog
+

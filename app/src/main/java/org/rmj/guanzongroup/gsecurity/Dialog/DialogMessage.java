@@ -1,5 +1,6 @@
 package org.rmj.guanzongroup.gsecurity.Dialog;
 
+
 import android.annotation.SuppressLint;
 import android.app.AlertDialog;
 import android.content.Context;
@@ -82,6 +83,8 @@ public class DialogMessage {
 //            isDialogShown = false;
         });
     }
+
+
 
     public void show() {
         if(!poDialogx.isShowing()) {

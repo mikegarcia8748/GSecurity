@@ -18,7 +18,7 @@ public class DialogLoad {
     private static boolean isShown;
     public DialogLoad(Context context) {
         this.context = context;
-}
+    }
     public void initDialog(String Title, String Message, boolean Cancellable){
         AlertDialog.Builder poBuilder = new AlertDialog.Builder(context);
         View view = LayoutInflater.from(context).inflate(R.layout.loaddialog, null);
@@ -48,4 +48,3 @@ public class DialogLoad {
         }
     }
 }
-
