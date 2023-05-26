@@ -1,10 +1,7 @@
 package org.rmj.guanzongroup.gsecurity.Adapter;
 
-import static androidx.core.content.ContextCompat.startActivity;
-
-import android.content.Intent;
-import android.os.Handler;
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -16,9 +13,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.android.material.textview.MaterialTextView;
 
-import org.rmj.guanzongroup.gsecurity.Authentication.Activity_CreateAccount;
-import org.rmj.guanzongroup.gsecurity.Authentication.Activity_Login;
-import org.rmj.guanzongroup.gsecurity.Dialog.DialogMessage;
+import org.rmj.guanzongroup.gsecurity.Dashboard.Activity_Dashboard;
 import org.rmj.guanzongroup.gsecurity.R;
 
 import java.util.List;
@@ -43,13 +38,9 @@ public class AdapterItinerary extends RecyclerView.Adapter<AdapterItinerary.VHPe
         String lsPersonnel = poPersonnels.get(position);
         holder.lblPersonx.setText(lsPersonnel);
 
-        // Set OnClickListener for the item view
-
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(v.getContext(), DialogMessage.class);
-                v.getContext().startActivity(intent);
                 showScanDialog(v);
             }
         });
@@ -89,5 +80,24 @@ public class AdapterItinerary extends RecyclerView.Adapter<AdapterItinerary.VHPe
                 dialog.dismiss();
             }
         });
+
+        btnPositive.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                Intent intent = new Intent(view.getContext(), Activity_Dashboard.class);
+                view.getContext().startActivity(intent);
+            }
+        });
+
+        btnNegative.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                dialog.dismiss();
+                Intent intent = new Intent(view.getContext(), Activity_Dashboard.class);
+                view.getContext().startActivity(intent);
+            }
+        });
     }
 }
+
