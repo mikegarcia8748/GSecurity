@@ -1,6 +1,7 @@
 package org.rmj.guanzongroup.gsecurity.Adapter;
 
 import android.app.AlertDialog;
+import android.content.Intent;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -70,19 +71,6 @@ public class AdapterItinerary extends RecyclerView.Adapter<AdapterItinerary.VHPe
 
         ImageButton btnCancel = dialogView.findViewById(R.id.cancelId);
         Button btnPositive = dialogView.findViewById(R.id.btnPositive);
-        Button btnNegative = dialogView.findViewById(R.id.btnNegative);
-
-    private void showScanDialog(View view) {
-        AlertDialog.Builder builder = new AlertDialog.Builder(view.getContext());
-        View dialogView = LayoutInflater.from(view.getContext()).inflate(R.layout.messagedialog, null);
-
-        builder.setView(dialogView);
-
-        AlertDialog dialog = builder.create();
-        dialog.show();
-
-        ImageButton btnCancel = dialogView.findViewById(R.id.cancelId);
-        Button btnPositive = dialogView.findViewById(R.id.btnPositive);
         Button btnNegative = dialogView.findViewById(R.id.BtnQRCODE);
 
         btnCancel.setOnClickListener(new View.OnClickListener() {
@@ -107,8 +95,6 @@ public class AdapterItinerary extends RecyclerView.Adapter<AdapterItinerary.VHPe
                 dialog.dismiss();
             }
         });
-    }
-}
         btnNegative.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
