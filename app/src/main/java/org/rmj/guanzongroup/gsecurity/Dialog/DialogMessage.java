@@ -5,7 +5,6 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.ImageButton;
 import android.widget.TextView;
 
 import androidx.annotation.Nullable;
@@ -48,7 +47,7 @@ public class DialogMessage extends AppCompatActivity {
         View dialogView = LayoutInflater.from(this).inflate(R.layout.scanned, null);
 
 
-        ImageButton cancelBtn = dialogView.findViewById(R.id.cancel);
+
         TextView titleTextView = dialogView.findViewById(R.id.title);
         TextView messageTextView = dialogView.findViewById(R.id.message);
 
