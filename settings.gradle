@@ -26,4 +26,5 @@ dependencyResolutionManagement {
 }
 rootProject.name = "gSecurity"
 include ':app'
-//include ':appdriver'
+include ':appdriver'
+include ':authLibrary'
